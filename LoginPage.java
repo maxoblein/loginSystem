@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
+import java.io.IOException;
 
 public class LoginPage implements ActionListener{
 
@@ -74,7 +75,13 @@ public class LoginPage implements ActionListener{
                 if(logininfo.get(userId).equals(userPassword)){
                     messageLabel.setForeground(Color.green);
                     messageLabel.setText("Login successful");
-                    WelcomePage welcomPage = new WelcomePage();
+                    frame.dispose();
+                    try {
+                        WelcomePage welcomePage = new WelcomePage(userId);
+                    } catch (IOException e1) {
+                        // TODO Auto-generated catch block
+                        e1.printStackTrace();
+                    }
                 }
                 else{
                     messageLabel.setForeground(Color.red);
