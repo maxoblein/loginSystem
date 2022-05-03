@@ -11,7 +11,7 @@ import java.io.IOException;
 public class WelcomePage {
 
     JFrame frame = new JFrame();
-    JLabel welcomeLabel = new JLabel("Give Your meat a good old rub!");
+    JLabel welcomeLabel = new JLabel("Give your meat a good old rub!");
     //JLabel imageLabel = new JLabel();
     //BufferedImage image = ImageIO.read(new File("ainsley.jpg"));
 
@@ -19,7 +19,7 @@ public class WelcomePage {
 
 
         welcomeLabel.setBounds(0,0,500,35);
-        welcomeLabel.setText(userID+" give Your meat a good old rub!");
+        welcomeLabel.setText(userID+" give your meat a good old rub!");
         welcomeLabel.setFont(new Font(null,Font.PLAIN,25));
         
 
